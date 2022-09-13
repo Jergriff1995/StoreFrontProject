@@ -1,0 +1,447 @@
+/*Index.html*/
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/*App*/
+#MenuAppDiv {
+  height: 100%;
+}
+/*Checkout*/
+#Checkout {
+  min-height: 80%;
+  text-align: center;
+}
+
+/*CheckoutTile*/
+#CheckoutTile {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 10px;
+  background-color: rgb(221, 221, 221);
+}
+
+#Pizza {
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+
+/*Menu*/
+#MenuPageDiv {
+  min-height: 80%;
+  text-align: center;
+}
+
+#MenuTileGrid {
+  display: grid;
+  grid-gap: 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/*MenuTile*/
+
+#Tile {
+  padding-top: 50px;
+  padding-right: 100px;
+  padding-bottom: 50px;
+  padding-left: 100px;
+  border: 1px solid black;
+  background-image: url("TempPizzaBackground.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  background-color: rgb(221, 221, 221);
+  text-align: center;
+}
+
+#TileText {
+  background-color: rgba(214, 214, 214, 0.466);
+  border-radius: 10px;
+}
+
+#TileInputField {
+  width: 30px;
+}
+
+/*Header*/
+#Header {
+  text-align: center;
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+/*Footer*/
+#Footer {
+  border-top: 1px solid black;
+  margin-top: 20px;
+}
+
+/*Unsorted*/
+#container {
+  grid-template-columns: [empty] 20% [col-1] 1fr [col-2] 1fr [col-3] 1fr [empty2] 20%;
+  grid-template-rows: auto;
+  display: grid;
+  grid-template-areas:
+    "header header header header header"
+    "tag tag tag tag tag"
+    "lPanel button1 image button2 ."
+    "lPanel spHead spHead spHead ."
+    "lPanel specials specials specials ."
+    "lPanel footer footer footer .";
+  margin: auto;
+  text-align: center;
+  min-height: 85%;
+}
+
+#specialsContainer {
+  grid-template-columns: [col-1] 1fr [col-2] 1fr [col-3] 1fr;
+  grid-template-rows: auto;
+  margin: 0 auto;
+  display: grid;
+  grid-area: specials;
+  grid-template-areas:
+    "special1 special2 special3"
+    "special4 special5 special6";
+  text-align: center;
+}
+
+#header {
+  grid-area: header;
+  font-family: "Italiana", serif;
+  font-style: oblique;
+  font-weight: 800;
+  background-color: rgba(220, 107, 41, 0.6);
+  color: white;
+  font-size: 48px;
+  text-align: center;
+  box-shadow: 15px;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 2px 16px 0px rgba(220, 107, 41, 0.8);
+  box-shadow: 0px 2px 16px 0px rgba(220, 107, 41, 0.8);
+}
+
+.tagline {
+  grid-area: tag;
+  background-color: rgba(243, 198, 129, 1);
+  border-bottom: 12px;
+  font-size: 32px;
+  text-align: center;
+  font-family: "Italiana", serif;
+  -webkit-box-shadow: 0px 2px 16px 0px rgba(243, 198, 129, 1);
+  box-shadow: 0px 2px 16px 0px rgba(243, 198, 129, 1);
+}
+
+.button {
+  font-family: "Bona Nova", serif;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+  border-radius: 12px;
+  color: white;
+  border-width: 0px;
+  border-radius: 12px;
+  border-color: rgba(243, 198, 129, 1);
+  background-color: rgba(220, 107, 41, 0.9);
+  transition: all 200ms ease-in-out;
+}
+
+#button1 {
+  grid-area: button1;
+}
+#button1:hover {
+  grid-area: button1;
+  background-color: rgba(220, 107, 41, 0.85);
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(220, 107, 41, 0.8);
+  box-shadow: 0px 1px 8px 0px rgba(220, 107, 41, 0.8);
+}
+#button2 {
+  grid-area: button2;
+}
+#button2:hover {
+  grid-area: button2;
+  background-color: rgba(220, 107, 41, 0.85);
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(220, 107, 41, 0.8);
+  box-shadow: 0px 1px 8px 0px rgba(220, 107, 41, 0.8);
+}
+
+.spHeader {
+  padding-top: 5%;
+  font-family: "Bona Nova", serif;
+  grid-area: spHead;
+  font-size: 50px;
+  padding-bottom: 25px;
+}
+
+#affiliate {
+  grid-area: footer;
+}
+
+img.headerImg {
+  margin-right: 5px;
+  max-width: 55px;
+}
+
+img.icon {
+  grid-area: image;
+  max-width: 300px;
+  margin-left: 80px;
+}
+
+img.specials {
+  justify-self: center;
+  align-self: center;
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 200;
+  min-height: 200;
+  margin: 5px;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 5%;
+}
+
+.sidepanel {
+  grid-area: lPanel;
+  justify-self: stretch;
+  padding-top: 200px;
+}
+.backendContainer {
+  display: grid;
+  grid-template-columns: [col-1] 20% [col-2] 1fr [col-3] 1fr [col-4]20%;
+  grid-template-areas:
+    "header header header header"
+    "tag tag tag tag "
+    ". form form ."
+    ". button1 button2 ."
+    ". orders orders .";
+}
+#backendRefresh {
+  margin-top: 20px;
+  grid-area: button1;
+  justify-self: stretch;
+  margin-right: 10px;
+}
+
+#backendRefresh:hover {
+  background-color: rgba(220, 107, 41, 0.85);
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(220, 107, 41, 0.8);
+  box-shadow: 0px 1px 8px 0px rgba(220, 107, 41, 0.8);
+}
+
+#activeRefresh {
+  margin-top: 20px;
+  grid-area: button2;
+  justify-self: stretch;
+  margin-left: 10px;
+}
+
+#activeRefresh:hover {
+  background-color: rgba(220, 107, 41, 0.85);
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(220, 107, 41, 0.8);
+  box-shadow: 0px 1px 8px 0px rgba(220, 107, 41, 0.8);
+}
+
+.orders {
+  margin-top: 3%;
+  justify-self: stretch;
+  -ms-grid-column-align: stretch;
+  grid-area: orders;
+  align-self: stretch;
+}
+
+.orderTile {
+  grid-template-columns: [col-1] 1fr [col-2] 1fr;
+  row-gap: 5px;
+  grid-area: orders;
+  grid-template-areas:
+    "orderTitle orderId"
+    "customerName  status"
+    "phone ordDate"
+    "item item"
+    "update  price";
+  display: grid;
+  font-family: "Bona Nova", serif;
+  margin-bottom: 1%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(220, 107, 41, 0.6);
+  border-radius: 7px;
+  background-color: rgba(243, 198, 129, 0.2);
+}
+
+h4.orderId {
+  grid-area: orderTitle;
+  text-align: center;
+  height: 30px;
+  margin: 0px;
+  border-bottom: 1px solid rgba(220, 107, 41, 0.6);
+}
+p.orderId {
+  grid-area: orderId;
+  text-align: center;
+  height: 30px;
+  margin: 0px;
+  border-bottom: 1px solid rgba(220, 107, 41, 0.6);
+}
+
+.custName {
+  grid-area: customerName;
+  padding: 0;
+  border-bottom: 1px solid black;
+}
+.custName > * {
+  margin: 5px;
+}
+.phone {
+  grid-area: phone;
+  border-bottom: 1px solid black;
+}
+.phone > * {
+  margin: 5px;
+}
+.ordDate {
+  grid-area: ordDate;
+  text-align: right;
+  border-bottom: 1px solid black;
+}
+.ordDate > * {
+  margin: 5px;
+}
+
+.price {
+  grid-area: price;
+  text-align: right;
+}
+.price > * {
+  margin: 5px;
+}
+.status {
+  grid-area: status;
+  text-align: right;
+  border-bottom: 1px solid black;
+}
+.status > * {
+  margin: 5px;
+}
+.item {
+  grid-area: item;
+  grid-template-columns: [col-1] 1fr [col-2] 1fr;
+  grid-template-areas: "itemTitle itemName";
+  border-bottom: 1px solid black;
+  display: grid;
+}
+.item > * {
+  margin-top: 0;
+  margin: 0px;
+}
+.itemTitle {
+  grid-area: itemTitle;
+  font-size: 20px;
+}
+.itemName {
+  grid-area: itemName;
+  text-align: right;
+}
+.update {
+  grid-area: update;
+  border-right: 1px solid black;
+}
+.update > * {
+  margin: 5px;
+}
+
+.formTile {
+  grid-area: form;
+  grid-template-columns: [col-1] 8% [col-2] 8% [col-3] 1fr [col-4]1fr [col-5]16%;
+  grid-template-areas:
+    " title title title title title"
+    ". . searchText searchButton ."
+    "order order order order order"
+    "radio1 radio2 . . set";
+  display: grid;
+  margin-top: 1%;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgba(220, 107, 41, 0.6);
+  border-radius: 7px;
+  background-color: rgba(243, 198, 129, 0.2);
+  min-height: 200px;
+}
+
+.formTitle {
+  font-family: "Bona Nova", serif;
+  grid-area: title;
+  margin-top: 10px;
+  text-align: center;
+  border-width: 0px 0px 2px 0px;
+  border-style: solid;
+  border-color: rgba(220, 107, 41, 0.6);
+  background-color: rgba(243, 198, 129, 0.22);
+}
+
+.formInput {
+  grid-area: searchText;
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  height: 35px;
+  border-radius: 5px;
+  border-width: 2px;
+  width: 400px;
+}
+
+.formSubmit {
+  grid-area: searchButton;
+  border-radius: 3px;
+  font-size: 22px;
+  height: 40px;
+  border-width: 3px;
+  font-family: "Bona Nova", serif;
+  background-color: rgba(243, 198, 129, 0.22);
+  border-color: rgba(220, 107, 41, 0.6);
+}
+.formSubmit:hover {
+  border-width: 1px;
+}
+#srchComp {
+  text-align: center;
+  grid-area: order;
+  font-size: 22px;
+  font-family: "Bona Nova", serif;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(220, 107, 41, 0.6);
+  border-radius: 7px;
+}
+.radioOne {
+  font-size: 22px;
+  font-family: "Bona Nova", serif;
+  grid-area: radio1;
+}
+.radioTwo {
+  font-size: 22px;
+  font-family: "Bona Nova", serif;
+  grid-area: radio2;
+}
+.buttonGrid {
+  grid-area: set;
+}
+#setButton {
+  justify-self: stretch;
+}
+#setButton:hover {
+  background-color: rgba(220, 107, 41, 0.85);
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(220, 107, 41, 0.8);
+  box-shadow: 0px 1px 8px 0px rgba(220, 107, 41, 0.8);
+}
